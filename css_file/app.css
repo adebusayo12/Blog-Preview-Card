@@ -1,0 +1,179 @@
+:root {
+  /* FONTS */
+  --body-font: "Figtree", sans-serif;
+  --font_size-h1: 2.2rem;
+  --font_size-h2: 1.8rem;
+  --font_size-b: 1.6rem;
+
+  /* COLOR PALLET */
+  --bg-color-01: hsl(47, 88%, 63%);
+  --bg-Neutral-01: hsl(0, 0%, 100%);
+  --bg-Neutral-02: hsl(0, 0%, 50%);
+  --bg-Neutral-03: hsl(0, 0%, 7%);
+
+  /* SPACING */
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.6rem;
+  --spacing-lg: 3.2rem;
+
+  /* border-radius */
+  --boder-radius: 2rem;
+  --boder-radius01: 0.2rem;
+
+  --standard-width: 114.4rem;
+
+  --standard-box-shadow: 0px 2px 4rem rgba(0, 0, 0, 0.15);
+
+  /* media query
+  1em = 16px 
+
+  eg 600/16 = 37.5em
+
+  0-600px = phone (0 - 37.5em)
+  600-900 = tablet portrait  (37.5em - 56.25em)
+  900-1200 = tablet landscape  (56.25em - 75em)
+  1200-1800 = normal (as built)  (75em - 112.5em)
+  1200- = big laptops  (112.5em - ) */
+
+  /* 
+  # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--standard-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--body-font);
+  font-size: var(--font_size);
+  background-color: var(--bg-color-01);
+}
+
+/* container */
+.container {
+  padding: 2.5rem;
+  width: 80%;
+  max-width: 43rem;
+  background-color: var(--bg-Neutral-01);
+  border-radius: var(--boder-radius);
+  border: 0.1rem black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: 10px 10px 0px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* image section */
+
+.container .img_box {
+  width: 100%;
+  border-radius: var(--boder-radius);
+  overflow: hidden;
+}
+.img_box img {
+  width: 100%;
+}
+
+/* text section */
+
+.container .body_text {
+  margin: var(--spacing-md) 0;
+}
+
+.body_text a {
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  background-color: var(--bg-color-01);
+  color: black;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: var(--font_size-b);
+}
+
+.body_text h2 {
+  margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  font-weight: 500;
+  font-size: var(--font_size-h2);
+  font-weight: bold;
+}
+
+.body_text h1 {
+  margin: 0 0 var(--spacing-md) 0;
+  font-weight: 500;
+  font-size: var(--font_size-h1);
+  font-weight: bold;
+  font-weight: 800;
+}
+
+.body_text p {
+  font-size: var(--font_size-b);
+  line-height: 1.5;
+  font-weight: lighter;
+  max-width: 90%;
+  color: var(--bg-Neutral-02);
+}
+
+/* avater and text section  */
+
+.container .imgNdText {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.imgNdText .img_box2 {
+  margin: 0 var(--spacing-md) 0 0;
+}
+.imgNdText p {
+  font-weight: 800;
+  font-size: var(--font_size-b);
+}
+
+/* footer section */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 33.5em) {
+  .container {
+    padding: 1.5rem;
+    width: 90%;
+  }
+}
